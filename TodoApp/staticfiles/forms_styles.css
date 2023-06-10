@@ -1,0 +1,35 @@
+
+header {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 0.5em;
+}
+.container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    /*width: 500px;*/
+}
+form {
+    margin: auto;
+    padding: 1em;
+    border: 1px solid #000000;
+    border-radius: 0.5em;
+    background-color: aliceblue;
+}
+
+button {
+    width: 5em;
+    height: 2.5em;
+    background-color: aquamarine;
+    border-radius: 0.5em;
+}
+button:hover {
+    background-color: darkblue;
+    color: white;
+}
+.container form p {
+    display: flex;
+    justify-content: space-between;
+}

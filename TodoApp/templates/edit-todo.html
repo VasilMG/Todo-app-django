@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="{% static 'forms_styles.css' %}">
+</head>
+<body>
+<header>
+    <h1>Edit ToDo</h1>
+</header>
+<hr/>
+<div class="container">
+<form action="{% url 'edit' pk=pk %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Submit</button>
+</form>
+    </div>
+</body>
+</html>

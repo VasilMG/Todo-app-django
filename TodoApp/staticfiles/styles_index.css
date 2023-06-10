@@ -1,0 +1,99 @@
+header {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 0.5em;
+}
+body {
+    background-color: #ffffff;
+}
+.list {
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    margin: auto;
+    gap: 1em;
+    width: 600px;
+}
+.item {
+    width: 600px;
+    background-color: aliceblue;
+    flex-basis: 100%;
+    border: 1px solid #000000;
+    border-radius: 0.5em;
+    padding-left: 1em;
+    flex-shrink: 0;
+    padding-bottom: 1em;
+}
+.create {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: #fff;
+    flex-basis: 100%;
+    align-items: center;
+    width: 100%;
+}
+.create a {
+    margin: auto;
+
+}
+.create a .d-button {
+    width: 6em;
+    height: 3em;
+    background-color: cadetblue;
+    border-radius: 0.5em;
+}
+
+.create a .d-button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.create a .c-button {
+    width: 5em;
+    height: 3em;
+    background-color: cadetblue;
+    border-radius: 0.5em;
+}
+.create a .c-button:hover {
+    background-color: darkblue;
+    color: white;
+}
+.edit {
+    width: 5em;
+    height: 3em;
+    background-color: cadetblue;
+    border-radius: 0.5em;
+}
+.edit:hover {
+    background-color: darkblue;
+    color: white;
+}
+.a-edit {
+    display: inline-block;
+}
+.delete {
+    width: 6em;
+    height: 3em;
+    background-color: crimson;
+    border-radius: 0.5em;
+    color: #000000;
+}
+.delete:hover {
+    background-color: brown;
+    color: #ffffff;
+}
+
+span {
+    color: darkblue;
+    font-weight: normal;
+}
+
+.no-items {
+    color: darkblue;
+    text-align: center;
+}
+

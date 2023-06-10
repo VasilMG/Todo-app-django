@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="{% static 'styles_index.css' %}">
+</head>
+<body>
+<header>
+    <h1>TODO App</h1>
+</header>
+<hr/>
+<div class="create">
+    <a href="{% url 'create_todo'%}">
+    <button class="c-button">Create</button>
+</a>
+    <a href="{% url 'download' %}" download="tasks.txt">
+        <button class="d-button">Download</button></a>
+    </div>
+
+<div class="list">
+<h2>List of open tasks</h2>
+</div>
+{% if not todos %}
+<div class="no-items">
+    <h4><em>You have no active tasks.</em></h4>
+</div>
+{% else %}
+<div class="container">
+{% for item in todos %}
+<div class="item">
+<h4><span>Task name:</span> {{ item.name }}</h4>
+<p><span>Description:</span> {{ item.description }}</p>
+
+    <a class="a-edit" href="{% url 'edit' pk=item.pk%}">
+        <button class="edit">Edit</button>
+    </a>
+    <a href="{% url 'delete' pk=item.pk%}">
+        <button class="delete">Delete</button>
+    </a>
+</div>
+{% endfor %}
+{% endif %}
+</div>
+
+
+</div>
+</body>
+</html>
